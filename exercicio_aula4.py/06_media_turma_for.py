@@ -1,7 +1,8 @@
 soma = 0
 notas_a_partir_de_sete = 0
+aluno = int(input("Digite a quantidade de alunos: "))
 
-for aluno in range(1, 5):
+for aluno in range(1, aluno + 1):
     print("Aluno:", aluno)
     nota = float(input("Digite uma nota de 0 a 10: "))
 
