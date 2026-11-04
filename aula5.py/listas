@@ -2,47 +2,47 @@
 
 lista = ["maçã", "banana", "laranja", "uva", "pera"]
 
-""" print(len(lista)) #Retorna o tamanho da lista
+print(len(lista)) #Retorna o tamanho da lista
 print(lista) #Retorna todos os elementos da lista
 
 print(lista[0]) #Retorna o primeiro elemento da lista
 print(lista[1]) #Retorna o segundo elemento da lista
 print(lista[2]) #Retorna o terceiro elemento da lista
 print(lista[3]) #Retorna o quarto elemento da lista
-print(lista[4]) #Retorna o quinto elemento da lista e por aí vai... """
+print(lista[4]) #Retorna o quinto elemento da lista e por aí vai...
 
 #forma mais simples de percorrer uma lista é utilizando o for, mas também podemos utilizar o while.
-""" contador = 0
+contador = 0
 
 while contador < len(lista):
     print(lista[contador])
-    contador += 1 """
+    contador += 1
 
 #forma mais simples de percorrer uma lista é utilizando o for, mas também podemos utilizar o while.
-""" for fruta in lista:
-    print(fruta) """
+for fruta in lista:
+    print(fruta)
 
 #Cada elemento possui uma posição, chamada índice. A contagem começa em zero.
-""" alunos = ["Ana", "Bruno", "Carla"]
+alunos = ["Ana", "Bruno", "Carla"]
 
 print(alunos[0])   # Ana
 print(alunos[1])   # Bruno
 print(alunos[2])   # Carla
-print(alunos[-1])  # Carla """
+print(alunos[-1])  # Carla
 
 #Listas são mutáveis: podemos modificar seu conteúdo depois da criação.
-""" notas = [8.0, 6.5, 9.0]
+notas = [8.0, 6.5, 9.0]
 notas[1] = 7.0
 
-print(notas)  # [8.0, 7.0, 9.0] """
+print(notas)  # [8.0, 7.0, 9.0]
 
 #append() adiciona um elemento ao final da lista.
-""" mochila = []
+mochila = []
 mochila.append("corda")
 mochila.append("lanterna")
 mochila.append("água")
 
-print(mochila)  # ['corda', 'lanterna', 'água'] """
+print(mochila)  # ['corda', 'lanterna', 'água']
 
 #podemos criar uma lista vazia e ir adicionando elementos a ela com o append().
 lista = []
@@ -61,3 +61,67 @@ if len(lista) > 0:
 else:   
     print("A lista está vazia.")
 
+
+lista = ["maçã", "banana", "laranja", "uva", "pera"]
+
+lista.append("abacaxi")  # Adiciona "abacaxi" ao final da lista
+lista.insert(0, "morango")  # Adiciona "morango" na posição 0 da lista
+lista.insert(1, "kiwi")  # Adiciona "kiwi" na posição 1 da lista
+
+print(lista)  # ['morango', 'kiwi', 'maçã', 'banana', 'laranja', 'uva', 'pera', 'abacaxi']
+
+lista.pop(2)  # Remove o elemento na posição 2 da lista (que é "maçã")
+lista.remove("laranja")  # Remove o elemento "laranja" da lista
+
+print(lista)  # ['morango', 'kiwi', 'banana', 'uva', 'pera', 'abacaxi']
+
+#exemplo de como percorrer uma lista e remover um elemento específico, caso ele exista na lista.
+my_list = ["apple", "banana", "orange", "grape", "pear"]
+
+for fruit in my_list:
+    print(fruit)
+
+elemento = input("Digite um elemento para remover da lista: ")
+
+if elemento in my_list:
+    my_list.remove(elemento)
+    print(f"{elemento} foi removido da lista.")
+else:
+    print(f"{elemento} não está na lista.")
+
+for fruit in my_list:
+        print(fruit)
+
+#verificando se um elemento está presente na lista e contando quantas vezes ele aparece se utilizar o método count().
+itens = ["água", "corda", "água"]
+
+print("corda" in itens)       # True
+print("lanterna" in itens)    # False
+print(itens.count("água"))    # 2
+
+#exemplo de como criar uma lista de notas, calcular a média e contar quantas notas são maiores ou iguais a 7.
+notas = []
+
+for numero in range(1, 5):
+    print("Nota número:", numero)
+    nota = float(input("Digite uma nota de 0 a 10: "))
+
+    while nota < 0 or nota > 10:
+        nota = float(input("Nota inválida. Digite de 0 a 10: "))
+
+    notas.append(nota)
+
+total = 0
+aprovadas = 0
+
+for nota in notas:
+    total += nota
+
+    if nota >= 7:
+        aprovadas += 1
+
+media = total / len(notas)
+
+print("Notas registradas:", notas)
+print("Média:", media)
+print("Notas a partir de 7:", aprovadas)
