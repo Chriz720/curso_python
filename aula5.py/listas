@@ -125,3 +125,4 @@ media = total / len(notas)
 print("Notas registradas:", notas)
 print("Média:", media)
 print("Notas a partir de 7:", aprovadas)
+
