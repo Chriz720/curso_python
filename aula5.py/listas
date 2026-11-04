@@ -1,0 +1,63 @@
+#Uma lista permite armazenar vários elementos em uma única variável, mantendo a ordem em que foram organizados.
+
+lista = ["maçã", "banana", "laranja", "uva", "pera"]
+
+""" print(len(lista)) #Retorna o tamanho da lista
+print(lista) #Retorna todos os elementos da lista
+
+print(lista[0]) #Retorna o primeiro elemento da lista
+print(lista[1]) #Retorna o segundo elemento da lista
+print(lista[2]) #Retorna o terceiro elemento da lista
+print(lista[3]) #Retorna o quarto elemento da lista
+print(lista[4]) #Retorna o quinto elemento da lista e por aí vai... """
+
+#forma mais simples de percorrer uma lista é utilizando o for, mas também podemos utilizar o while.
+""" contador = 0
+
+while contador < len(lista):
+    print(lista[contador])
+    contador += 1 """
+
+#forma mais simples de percorrer uma lista é utilizando o for, mas também podemos utilizar o while.
+""" for fruta in lista:
+    print(fruta) """
+
+#Cada elemento possui uma posição, chamada índice. A contagem começa em zero.
+""" alunos = ["Ana", "Bruno", "Carla"]
+
+print(alunos[0])   # Ana
+print(alunos[1])   # Bruno
+print(alunos[2])   # Carla
+print(alunos[-1])  # Carla """
+
+#Listas são mutáveis: podemos modificar seu conteúdo depois da criação.
+""" notas = [8.0, 6.5, 9.0]
+notas[1] = 7.0
+
+print(notas)  # [8.0, 7.0, 9.0] """
+
+#append() adiciona um elemento ao final da lista.
+""" mochila = []
+mochila.append("corda")
+mochila.append("lanterna")
+mochila.append("água")
+
+print(mochila)  # ['corda', 'lanterna', 'água'] """
+
+#podemos criar uma lista vazia e ir adicionando elementos a ela com o append().
+lista = []
+
+while True:
+    item = input("Digite um item para adicionar à lista (ou 'sair' para encerrar): ")
+    
+    if item.lower() == "sair":
+        break
+    
+    lista.append(item)
+
+if len(lista) > 0:
+    for item in lista:
+        print(item)
+else:   
+    print("A lista está vazia.")
+
