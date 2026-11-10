@@ -24,7 +24,7 @@ print(f"O valor da venda ficou: R$ {total_venda(preco, qtd)}") """
 
 #para definir o nome da classe ela precisa estar com a primeira letra maiúscula
 #Este é um exemplo de classificador:
-class Produto:
+""" class Produto:
     def __init__(self, nome, preco, estoque):
         self.nome = nome
         self.preco = preco
@@ -63,7 +63,7 @@ produto2.resumo
 produto3.resumo()
 print()
 print(produto3.vender(2))
-produto3.resumo
+produto3.resumo """
 
 #que é a mesma coisa do que:
 """ print(f"Nome: {produto1.nome}")
@@ -78,5 +78,37 @@ print(f"Nome: {produto3.nome}")
 print(f"Preço: {produto3.preco}")
 print(f"Qtd estoque: {produto3.estoque} unidades") """
 
+#exemplo de orientação a objetos
+class Tarefa:
+    def __init__(self, descricao):
+        self.descricao = descricao
+        self.status = "Pendente"
+        
+    def resumo(self):
+        print(f"Descrição: {self.descricao}\nStatus: {self.status}")
 
+    def concluir(self):
+        if self.status == "Concluída":
+            return f"{self.descricao} já está concluída!"
+        
+        self.status = "Concluída"
+        return f"{self.descricao} concluída com sucesso!"
 
+tarefa1 = Tarefa("Aprender Python")
+tarefa2 = Tarefa("Estudar Lógica de Programação")
+tarefa3 = Tarefa("Baixar GTA VI")
+tarefa4 = Tarefa("Achar Easter Eggs")
+
+#Aqui ele printa a primeira verificação
+print("\nAntes")
+tarefa1.resumo()
+print(tarefa1.concluir())
+tarefa1.resumo
+print("Depois\n")
+
+#Aqui ele printa a segunda que já confere e diz que a tarefa já está concluída
+print("\nAntes")
+tarefa1.resumo()
+print(tarefa1.concluir())
+tarefa1.resumo
+print("Depois\n")
