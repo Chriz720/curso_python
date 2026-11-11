@@ -32,7 +32,7 @@ print(f"O valor da venda ficou: R$ {total_venda(preco, qtd)}") """
     
     def resumo(self):
         print("----------------------------------------")
-        print(f"Nome {self.nome}")
+        print(f"Nome: {self.nome}")
         print(f"Preço: R$ {self.preco}")
         print(f"Qtd. Estoque: {self.estoque} unidades")
 
