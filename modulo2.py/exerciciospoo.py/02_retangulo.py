@@ -7,3 +7,6 @@ class Retangulo:
         return(self.largura * self.altura)
 retangulo1 = Retangulo(4, 3)
 print(retangulo1.calcular_area())
+
+retangulo2 = Retangulo(7, 6)
+print(retangulo2.calcular_area())
