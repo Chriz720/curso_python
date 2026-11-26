@@ -4,10 +4,10 @@ janela.title("Minha Aplicação")
 janela.geometry("300x200")
 janela.resizable(False, False)
 
-texto = tk.Label(text="Hello, World!", font=("NewTimesRoman", 30), pady=30)
+texto = tk.Label(text="Hello, World!", font=("Times New Roman", 30), pady=30)
 texto.pack()
 
-janela.mainloop() """
+janela.mainloop()  """
 
 """ import tkinter as tk
 janela = tk.Tk()
